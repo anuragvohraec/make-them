@@ -1,15 +1,13 @@
 import { LitElement, html, css } from "lit-element";
 
 
-const _allowedFlexValue = new Set(['flex-start','flex-end', 'center', 'space-around', 'space-between','stretch','base-line']);
-
-
 export class StackThem extends LitElement{
 
-    constructor(flexDirection){
+    constructor(){
         super();
+        this.ma="center";
+        this.ca="center";
     }
-
 
     static get styles(){
         return css`
@@ -17,11 +15,17 @@ export class StackThem extends LitElement{
     width: 100%;
     height: 100%;
     overflow: auto;
-    display: flex;
-    direction: column;
-    justify-content: center;
-	align-items: center;
 }
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+    position: relative;
+}
+
 ::slotted(div){
     position: absolute;
 }
@@ -31,10 +35,11 @@ export class StackThem extends LitElement{
     render(){
         return html`
 <div class="container">
-    <slot></slot>
+    <div class="flex" id="flex">
+        <slot></slot>
+    </div>
 </div>
 `;
     }
 
 }
-
