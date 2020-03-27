@@ -1,0 +1,55 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import '../make-them.js';
+
+<Meta 
+  title="MakeThem"
+  parameters={{
+    component: "make-them",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# MakeThem
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add make-them
+```
+
+```js
+import 'make-them/make-them.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+      <make-them></make-them>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="make-them" />
+
+## Variations
+
+###### Custom Title
+
+<Story name="Custom Title">
+  {html`
+    <make-them .title=${'Hello World'}></make-them>
+  `}
+</Story>
