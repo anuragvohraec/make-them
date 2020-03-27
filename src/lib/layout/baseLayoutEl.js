@@ -36,7 +36,8 @@ export class BaseLayoutEl extends LitElement{
 }
 .flex{
     display: flex;
-	flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    height: 100%;
 }
         `;
     }
