@@ -1,7 +1,7 @@
 {
   "name": "make-them",
   "version": "0.0.0",
-  "description": "Webcomponent make-them following open-wc recommendations",
+  "description": "Easily lay out your other components",
   "author": "make-them",
   "license": "MIT",
   "main": "index.js",

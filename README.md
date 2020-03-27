@@ -1,6 +1,12 @@
 # \<make-them>
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
+As of now its contains following components:
+
+* column-them : puts child div in a column
+* row-them: puts child div in row.
+* center-them: Center a single child.
+* stack-them: put all child divs in a stack
 
 ## Installation
 ```bash
