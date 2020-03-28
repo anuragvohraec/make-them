@@ -1,40 +1,15 @@
-import { LitElement, html, css } from "lit-element";
+import { BaseLayoutEl } from "./baseLayoutEl.js";
 
 
-export class CenterThem extends LitElement{
-
+export class CenterThem extends BaseLayoutEl{
     constructor(){
-        super();
+        super("column");
         this.ma="center";
         this.ca="center";
     }
 
-    static get styles(){
-        return css`
-.container{
-    width: 100%;
-    height: 100%;
-	overflow: auto;
-}
-.flex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    height: 100%;
-}
-        `;
+    connectedCallback(){
+        super.connectedCallback();
+        console.log(this.parentNode.querySelector('.flex'));
     }
-
-    render(){
-        return html`
-<div class="container">
-    <div class="flex" id="flex">
-        <slot></slot>
-    </div>
-</div>
-`;
-    }
-
 }

@@ -1,35 +1,36 @@
 import { LitElement, html, css } from "lit-element";
+import { BaseLayoutEl } from "./baseLayoutEl";
 
 
-export class StackThem extends LitElement{
+export class StackThem extends BaseLayoutEl{
 
     constructor(){
         super();
-        this.ma="center";
-        this.ca="center";
     }
 
     static get styles(){
-        return css`
-.container{
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-}
-.flex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    height: 100%;
-    position: relative;
-}
-
-::slotted(div){
-    position: absolute;
-}
-        `;
+        return [
+            super.styles,
+            css`
+            .container{
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+            }
+            .flex{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                height: 100%;
+                position: relative;
+            }
+            
+            ::slotted(div){
+                position: absolute;
+            }`
+          ];
     }
 
     render(){
