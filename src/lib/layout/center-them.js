@@ -7,9 +7,4 @@ export class CenterThem extends BaseLayoutEl{
         this.ma="center";
         this.ca="center";
     }
-
-    connectedCallback(){
-        super.connectedCallback();
-        console.log(this.parentNode.querySelector('.flex'));
-    }
 }
